@@ -1,0 +1,123 @@
+.book{
+	max-width: 574px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 40px;
+
+	&-card{
+		background-color: #e8e8e8;
+		width: 140px;
+		position: absolute;
+		left: 50%;
+
+
+		&:before {
+			content: "";
+			display: block;
+			padding-top: 45%;
+		}
+
+		&__data {
+			&:before{
+				content: "";
+				display: block;
+				height: 10%;
+				width: 30%;
+				background-color: #b1b5b8;
+				position: absolute;
+				top: 40%;
+				left: 45%;
+			}
+
+			&:after{
+				content: "";
+				display: block;
+				height: 10%;
+				width: 40%;
+				background-color: #b1b5b8;
+				position: absolute;
+				top: 55%;
+				left: 45%;
+			}
+		}
+
+		&__photo {
+			display: block;
+			position: absolute;
+			width: 30%;
+			top: 50%;
+			margin-top: -15%;
+			left: 10%;
+			overflow: hidden;
+
+			&:before {
+				padding-top: 100%;
+				display: block;
+				content: "";
+			}
+
+			ins {
+				position: absolute;
+				display: block;
+				width: 40%;
+				border-radius: 50%;
+				overflow: hidden;
+				top:10%;
+				left: 0;
+				right: 0;
+				margin-left: auto;
+				margin-right: auto;
+				background-color: @green;
+
+				&:before {
+					content: "";
+					display: block;
+					padding-top: 100%;
+				}
+			}
+
+			span {
+				position: absolute;
+				display: block;
+				width: 80%;
+				border-radius: 50%;
+				overflow: hidden;
+				top:60%;
+				left: 0;
+				right: 0;
+				margin-left: auto;
+				margin-right: auto;
+				
+				background-color: @green;
+
+				&:before {
+					content: "";
+					display: block;
+					padding-top: 100%;
+				}
+			}
+		}
+
+
+		&:nth-child(1) {
+			width: 140px;
+			bottom: 210px;
+			margin-left: -200px;
+		}
+
+		&:nth-child(2) {
+			width: 97px;
+			bottom: 150px;
+			margin-left: -75px;
+		}
+
+		&:nth-child(3) {
+			margin-left: 58px;
+			width: 114px;
+			bottom: 175px;
+		}
+	}
+
+
+}

@@ -1,0 +1,41 @@
+.text{
+	.fz(20, 30);
+	letter-spacing: -.005em;
+	font-weight: 400;
+	margin-bottom: .85em;
+
+	&--fz-30 {
+		.fz(30, 38);
+	}
+
+	&__contact {
+		margin-bottom: 5px;
+
+		&--underline {
+			border-bottom: 1px solid #fff;
+		}
+	}
+
+	&--mw-850 {
+		max-width: 850px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	&--wrap {
+		display: block;
+	}
+
+	b {
+		font-weight: bold;
+		
+	}
+
+	@media (max-width: @screen-md) {
+		.fz(18, 30);
+
+		&--fz-30 {
+			.fz(26, 34);
+		}
+	}
+}

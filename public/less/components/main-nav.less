@@ -1,0 +1,54 @@
+.main-nav{
+	position: absolute;
+	left: 0;
+	width: 100%;
+	top: 100%;
+	background-color: rgba(255, 255, 255, 0.9);
+	box-shadow: 0 -1px 0 0 black, 0 1px 0 0 black;
+	z-index: 1;
+
+	.container {
+	}
+
+	&__row {
+		display: flex;
+		position: relative;
+
+	}
+
+	&__progress {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		width: auto;
+		background-color: @violet;
+		transform: translateZ(0);
+		transition: width .45s ease-out;
+	}
+
+	&__link {
+		font-size: 20px;
+		text-decoration: none;
+		color: @black;
+		padding: 10px 30px;
+		transition: color 0.2s;
+
+		&:hover {
+			color: @violet;
+		}
+
+		&.is-active {
+			color: #fff
+		}
+
+		&--active {
+			background-color: #9020fe;
+			color: #fff;
+		}
+
+		&--last {
+
+		}
+	}
+}

@@ -1,0 +1,19 @@
+.container {
+  .container-fixed();
+  position: relative;
+
+  @media (min-width: @screen-sm-min) {
+    width: @container-sm;
+  }
+  @media (min-width: @screen-md-min) {
+    width: @container-md;
+  }
+
+  @media (min-width: @screen-md-min) and (max-width: @screen-lg-min) {
+    width: @container-md;
+  }
+
+  @media (min-width: @screen-lg-min) {
+    width: @container-lg;
+  }
+}

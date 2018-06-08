@@ -1,0 +1,53 @@
+.header{
+	position: relative;
+	background-color: #fff;
+	min-height: 117px;
+	background-color: @black;
+	padding-top: 22px;
+	padding-bottom: 22px;
+	background-color: #fff;
+
+	&__row{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__contacts {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-start;
+		font-size: 24px;
+		font-weight: 400;
+
+		*:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__link {
+		margin-right: 20px;
+		text-decoration: none;
+		color: @base-color;
+
+		&:hover {
+				color: darken(@base-color, 10%);
+			}
+
+		&[href^=mailto] {
+			color: @violet;
+
+			&:hover {
+				color: lighten(@violet, 20%);
+			}
+		}
+	}
+
+	@media (max-width: @screen-md) {
+		&__link {
+			display: none;
+		}
+	}
+}

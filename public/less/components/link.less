@@ -1,0 +1,25 @@
+.link{
+	white-space: nowrap;
+	color:@green;
+	.fz(20);
+	text-decoration: none;
+	fill: @green;
+	transition: 
+		color .3s,
+		fill .3s;
+
+	.svg-icon {
+		display: inline-block;
+		vertical-align: middle;
+		width: 18px;
+		height: 18px;
+		fill: inherit;
+		margin-left: 2px;
+	}
+
+	&:hover {
+		color: darken(@green, 10%);
+		fill: darken(@green, 10%)
+	}
+	
+}

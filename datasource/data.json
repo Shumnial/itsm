@@ -1,0 +1,52 @@
+{
+	"title": "Заголовок страницы",
+	"companyName": "Iron",
+	"steps": [
+		{
+			"content": "<a target=\"_blank\" href=\"https://outlook.office365.com/owa/calendar/Bookings@ru.iron-neo.com/bookings/\">Оставьте заявку</a><br />на&nbsp;сайте Наш менеджер свяжется с&nbsp;вами и&nbsp;покажет возможности платформы."
+		},
+		{
+			"content": "Зарегистрируем личный кабинет и&nbsp;вместе заполним информацию об&nbsp;услугах, мастерах и&nbsp;стоимости."
+		},
+		{
+			"content": "Подскажем, как привлечь на&nbsp;сайт максимальное количество пользователей."
+		},
+		{
+			"content": "После запуска проконсультируем по&nbsp;всем вопросам."
+		}
+	],
+	"social": [
+		{
+			"url": "https://www.facebook.com/ironneocom",
+			"icon": "i-facebook"
+		},
+		{
+			"url": "https://www.instagram.com/ironneocom/",
+			"icon": "i-instagram"
+		},
+		{
+			"url": "https://www.linkedin.com/company/iron-neo",
+			"icon": "i-linkedin2"
+		},
+		{
+			"url": "https://vk.com/ironneocom",
+			"icon": "i-vk"
+		},
+		{
+			"url": "https://twitter.com/ironneocom",
+			"icon": "i-twitter"
+		},
+		{
+			"url": "https://plus.google.com/b/105957725434812798553",
+			"icon": "i-google-plus"
+		},
+		{
+			"url": "https://ironneocom.tumblr.com",
+			"icon": "i-tumblr"
+		},
+		{
+			"url": "https://telegram.me/IronNeoBot",
+			"icon": "i-paper-plane"
+		}
+	]
+}

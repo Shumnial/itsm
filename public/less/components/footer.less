@@ -1,0 +1,73 @@
+.footer{
+	padding: 50px 0;
+	&__row {
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+
+	&__col {
+		flex: 0 0 25%;
+		max-width: 25%;
+
+		&--size-auto {
+			flex: 1 1 auto;
+			max-width: none;
+		}
+	}
+
+	&__contacts{
+		.fz(16, 21);
+
+		a {
+			color: @link-color;
+			text-decoration: none;
+			transition: color .3s;
+
+			&:hover {
+				color: @orange
+			}
+
+			&[href^="tel"] {
+				color: @base-color;
+				white-space: nowrap;
+			}
+			
+		}
+	}
+
+	&__copy {
+		.fz(12, 17);
+		display: block;
+		margin-top: 20px;
+	}
+
+	@media (max-width: @screen-md) {
+		&__row {
+			display: block;
+		}
+
+		&__col {
+			max-width: 100%;
+			width: 100%;
+		}
+	}
+
+	@media (max-width: @screen-xs) {
+		&__row {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		&__col {
+			flex: 0 0 45%;
+			max-width: 45%;
+
+			&--size-auto {
+				flex: 0 0 45%;
+				max-width: 45%;
+			}
+		}
+	}
+}

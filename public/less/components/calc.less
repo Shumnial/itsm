@@ -1,0 +1,179 @@
+.calc{
+	position: relative;
+	background-color: #fff;
+	border-radius: 5px;
+	padding-top: 1px;
+	padding-bottom: 40px;
+
+	&__wrapper {
+		left: 0;
+		bottom: 20px;
+		text-align: center;
+	}
+
+	&__btn {
+		text-transform: uppercase;
+		height: 55px;
+		line-height: 55px;
+		padding: 0 25px;
+	}
+
+	&__mail-btn {
+		margin-top: 10px;
+		margin-bottom: 20px;
+	}
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		margin: 0 40px;
+		padding: 40px 0;
+
+		&--hidden {
+			display: none;
+		}
+
+		&--border {
+			border-bottom: 1px solid #ecddfb;
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.calc-item {
+	width: 17.3%;
+
+	&__input, 
+	&__result {
+		padding: 10px 20px;
+		border-radius: 5px;
+		margin-bottom: 15px;
+		font-size: 30px;
+		font-weight: 300;
+		width: 100%;
+		transition: border 0.15s;
+
+		&:focus {
+			outline: none;
+			border: 2px solid darken(#ecddfb, 10%);
+		}
+	}
+
+	&__input {
+		border: 2px solid lighten(@violet, 40%);
+
+		&::placeholder {
+			opacity: 0.5;
+		}
+
+		&:hover, &:focus {
+			border-color: @violet;
+		}
+	}
+
+	&__result {
+		position: relative;
+		z-index: 2;
+		height: 56px;
+		border: 2px solid @violet;
+		color: @violet;
+		font-size: 30px;
+		line-height: 30px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		background-color: #fff;
+	}
+
+	&__descr {
+		.fz(16, 20);
+		color: #706f73;
+
+		&--last {
+			position: relative;
+			z-index: 2;
+			color: #fff;
+			padding: 5px 10px;
+			font-size: 20px;
+		}
+	}
+
+	&--last {
+		position: relative;
+
+		&::after {
+			z-index: 1;
+			position: absolute;
+			top: -4%;
+			left: -4%;
+			content: '';
+			width: 108%;
+			height: 250px;
+			border-radius: 5px;
+			background-color: @violet;
+		}
+	}
+}
+
+@media (max-width: @screen-lg) {
+	.calc {
+
+		&__row {
+			flex-wrap: wrap;
+			justify-content: space-around;
+		}
+
+		&__results {
+			margin-bottom: 40px;
+		}
+	}
+
+	.calc-item {
+		width: 35%;
+		margin-bottom: 50px;
+	}
+}
+
+@media (max-width: @screen-md) {
+	.calc {
+
+		&__btn {
+		}
+	}
+
+	.calc-item {
+		width: 45%;
+		margin: 0 auto;
+		margin-bottom: 50px;
+	}
+}
+
+@media (max-width: @screen-sm) {
+	.calc {
+
+		&__row {
+			display: block;
+
+			&--hidden {
+				display: none;
+			}
+		}
+	}
+
+	.calc-item {
+		width: 50%;
+	}
+}
+
+@media (max-width: 600px) {
+	.calc-item {
+		width: 70%;
+	}
+}
+
+@media (max-width: @screen-xs) {
+	.calc-item {
+		width: 100%;
+	}
+}
+

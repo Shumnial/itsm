@@ -1,0 +1,24 @@
+.title{
+	.fz(60, 66*1.2);
+	letter-spacing: -.005em;
+	font-weight: 300;
+	margin-bottom: 0.4em;
+
+	&--size-extra {
+		.fz(50, 50*1.2);
+		margin-bottom: .5em;
+	}
+
+	&--size-small {
+		.fz(30, 36)
+	}
+
+	@media (max-width: @screen-md) {
+		.fz(36, 36*1.2);
+
+		&--size-extra {
+			.fz(40, 40*1.2);
+			margin-bottom: .5em;
+		}
+	}
+}

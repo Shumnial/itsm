@@ -1,0 +1,11 @@
+{% macro Icon(id, class) %}
+	<span class="svg-icon svg-icon--{{ id }} {{ class }}">
+		<svg xmlns="http://www.w3.org/2000/svg" class="svg-icon__glyph" role="img">
+			<use xlink:href="#{{ id }}"></use>
+		</svg>
+	</span>
+{% endmacro %}
+
+{% macro Btn(href, class) %}
+<a href="{{ href }}"  class="btn btn--size-large {{ class }}"  target="_blank">Написать нам</a>
+{% endmacro %}

@@ -1,0 +1,62 @@
+.btn{
+	display: inline-block;
+	vertical-align: top;
+	height: 44px;
+	line-height: 42px;
+	text-decoration: none;
+	user-select: none;
+	outline: none;
+	border: 0;
+	border-radius: 3px;
+	box-shadow: none;
+	color: #fff;
+	background-color: @violet;
+	font-family: inherit;
+	padding-left: 40px;
+	padding-right: 40px;
+	font-size: 20px;
+	font-weight: 400;
+	cursor: pointer;
+	transition: background-color .3s;
+
+	&:hover {
+		background-color: darken(@violet, 10%)
+	}
+
+	&:active {
+		transform: translateY(2px)
+	}
+
+	&--bg-white {
+		background-color: #fff;
+		color: @black;
+
+		&:hover {
+			background-color: darken(#fff, 10%)
+		}
+	}
+
+	&--mt {
+		margin-top: 30px;
+	}
+
+	.svg-icon {
+		display: inline-block;
+		vertical-align: middle;
+		width: 26px;
+		height: 26px;
+		fill: #fff;
+		margin-left: 5px;
+	}
+
+	&--size-large {
+		height: 55px;
+		line-height: 53px;
+		padding-left: 67px;
+		padding-right: 67px;
+		font-size: 20px;
+		white-space: nowrap;
+	}
+
+	
+}

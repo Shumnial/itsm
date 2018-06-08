@@ -1,0 +1,31 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer__row">
+      <div class="footer__col">
+        <div class="footer__contacts">
+          <a href="tel:+79030628088">+7 (843) 259-1868</a><br>
+          <a href="mailto:pr@iron-neo.com">pr@iron-neo.com</a>
+          <p class="footer__copy">ООО Айрон Нео&nbsp;| Iron Neo LLC<br>&copy;&nbsp;2018 Iron Neo LLC
+          </p>
+        </div>
+      </div>
+      <div class="footer__col footer__col--size-auto">
+        <div class="social">
+          {% for item in common.data.social %}
+            <a href="{{ item.url }}" class="social__link" target="_blank">{{ Macros.Icon(item.icon) }}</a>
+          {% endfor %}
+        </div>
+       
+      </div>
+      <div class="footer__col">
+        <div class="ms">
+          <div class="ms__label">Gold</div>
+          <div class="ms__title">Microsoft Partner</div>
+          <div class="ms__logo">
+            <img src="{{ 'RE1Mu3b.png' | img_asset }}" alt="Microsoft">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
