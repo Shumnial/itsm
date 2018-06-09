@@ -98,7 +98,7 @@ $(() =>{
 		const top = $(id).offset().top + 10;
 		spyScroll = false;
 
-		$('body, html').animate({scrollTop: top}, 1000, () => {
+		$('html').animate({scrollTop: top}, 1000, () => {
 			spyScroll = true;
 
 			scrollHandler.call(null)
@@ -127,7 +127,7 @@ $(() =>{
 
 		if(!target) {
 			links.removeClass('is-active');
-			return progressMinWidth
+			return progressMinWidth;
 		}
 
 		const el = $(`.main-nav__link[href="#${target}"]`);
@@ -145,7 +145,7 @@ $(() =>{
 		const result = p + w;
 
 		setActive(el);
-		return result <= 0 ? progressMinWidth : result
+		return result <= 0 ? progressMinWidth : result;
 	}
 
 	function setActive (el) {
@@ -156,7 +156,7 @@ $(() =>{
 
 	function scrollHandler () {
 		if(!spyScroll) return;
-		spyScroll = true
+		spyScroll = true;
 		const top = $(window).scrollTop();
 		let target = null;
 		for (let i in positions) {
