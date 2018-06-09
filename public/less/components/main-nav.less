@@ -4,7 +4,7 @@
 	width: 100%;
 	top: 100%;
 	background-color: rgba(255, 255, 255, 0.9);
-	box-shadow: 0 -1px 0 0 black, 0 1px 0 0 black;
+	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
 	z-index: 1;
 
 	.container {
@@ -39,16 +39,25 @@
 		}
 
 		&.is-active {
-			color: #fff
-		}
-
-		&--active {
-			background-color: #9020fe;
 			color: #fff;
 		}
 
 		&--last {
 
 		}
+	}
+
+	@media (max-width: @screen-lg) {
+		&__row {
+			align-items: center;
+		}
+
+		&__link {
+			font-size: 16px;
+		}
+	}
+
+	@media (max-width: @screen-md) {
+		display: none;
 	}
 }

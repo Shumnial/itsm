@@ -41,17 +41,70 @@
 }
 
 .calc-item {
+	position: relative;
 	width: 17.3%;
+
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+  }
+
+  &__symbol {
+  	position: absolute;
+  	top: -1px;
+  	right: 15px;
+  	font-size: 30px;
+  	line-height: 56px;
+  	color: rgba(0, 0, 0, 0.4);
+  	z-index: 2;
+
+  	&--cr-violet {
+  		color: @violet;
+  	}
+  }
+
+  /* &--roubles {
+  	&::before {
+  			position: absolute;
+  			content: '₽';
+  			font-size: 30px;
+  			line-height: 56px;
+  			width: 30px;
+  			height: 56px;
+  			right: 5px;
+  			top: -2px;
+  			color: gray;
+  		}
+  }
+  
+  &--percentage {
+  	&::before {
+  			position: absolute;
+  			content: '%';
+  			font-size: 30px;
+  			line-height: 56px;
+  			width: 30px;
+  			height: 56px;
+  			right: 5px;
+  			top: -2px;
+  			color: gray;
+  		}
+  } */
 
 	&__input, 
 	&__result {
 		padding: 10px 20px;
+		padding-right: 40px;
 		border-radius: 5px;
 		margin-bottom: 15px;
 		font-size: 30px;
 		font-weight: 300;
 		width: 100%;
 		transition: border 0.15s;
+		overflow: hidden;
+		text-overflow: ellipsis;
 
 		&:focus {
 			outline: none;
@@ -68,6 +121,10 @@
 
 		&:hover, &:focus {
 			border-color: @violet;
+		}
+
+		&:focus + .calc-item__symbol {
+			color: black;
 		}
 	}
 
