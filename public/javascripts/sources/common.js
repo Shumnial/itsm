@@ -29,21 +29,17 @@ $(() =>{
 
 	function calcAvgSalary() {
 		let val = calcInputs["workers"].val();
-		console.log("val: ", val);
 		return Math.floor(calcWorkers() * +val);
 	}
 
 	function calcRatio() {
-		let val = calcInputs["ratio"].val();
-		
-		console.log("val: ", val);
+		// Усредненное значение
+		let val = 35;
 		return Math.floor(calcAvgSalary() / +val * 100);
 	}
 
 	function calcMargin() {
 		let val = calcInputs["margin"].val();
-		
-		console.log("val: ", val);
 		return Math.floor(calcRatio() / +val * 100);
 	}
 
@@ -66,6 +62,7 @@ $(() =>{
 		getResult(calcResults['margin'], calcMargin());
 		getResult(calcResults['workdays'], calcWorkdays());
 		$('.calc__row--hidden').removeClass('calc__row--hidden');
+		$('.calc__note--hidden').removeClass('calc__note--hidden');
 		$('.calc__btn').text('Пересчитать');
 	}
 
@@ -117,9 +114,10 @@ $(() =>{
 	}
 	
 	function getPositions () {
+		const navHeight = $('.main-nav').height();
 		progressMinWidth = row.offset().left;
 		sections.each((idx, el) => {
-			positions[el.id]= $(el).offset().top
+			positions[el.id]= $(el).offset().top - navHeight;
 		});
 	}
 
