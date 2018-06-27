@@ -38,7 +38,7 @@
 	</div>
 </section>
 
-<section class="section section--bg-violet" id="for-what">
+<section class="section section--bg-gray" id="for-what">
 	<div class="container">
 		<div class="section__inner" data-aos="fade-right" data-aos-offset="200" >
 			<div class="section__content">
@@ -47,26 +47,11 @@
 				<div class="section__text-wrapper">
 					<p class="text">Организация резервного ЦОДа&nbsp;&mdash; один из&nbsp;ключевых этапов планирования непрерывности бизнеса. Если вы&nbsp;хотите, чтобы данные компании были защищены, а&nbsp;в&nbsp;случае сбоев оборудования рабочий процесс восстанавливался максимально быстро, вам нужен резервный&nbsp;ЦОД.</p>
 				</div>
-				{{ Macros.Btn('mailto:info@it-sm.org', 'btn--bg-white' + ' btn--mt') }}
+				{{ Macros.Btn('mailto:info@it-sm.org','btn--mt') }}
 			</div>
 		</div>
 		<div class="section__stage stage">
 			<img class="stage__object"  data-aos="fade-up" data-aos-offset="200" data-aos-delay="150" data-obj="3" src="{{ 'for-what.jpg' | img_asset }}" alt="">
-		</div>
-	</div>
-</section>
-
-<section class="section section--onecolumn section--no-min-height">
-	<div class="container">
-		<div class="section__inner section__inner--height-auto section__inner--no-padding">
-			<div class="section__content" data-aos="fade-up" data-aos-offset="200">
-				<h2 class="title" data-aos="fade-up" data-aos-offset="200" data-aos-delay="150">Если резерв&nbsp;– то&nbsp;в&nbsp;облаке</h2>
-				<p class="text text--mw-850">Создание резервного сервера в&nbsp;наземной инфраструктуре обойдется вашей компании не&nbsp;дешевле покупки основного, первичного. На&nbsp;&laquo;железо&raquo; и&nbsp;программное обеспечение придется потратить от&nbsp;500&nbsp;000&nbsp;рублей.</p>
-				<p class="text text--mw-850 text--mb">В&nbsp;то&nbsp;время как резервный ЦОД в&nbsp;облаке не&nbsp;требует капитальных затрат. А&nbsp;операционные затраты составят всего от&nbsp;4&nbsp;750 рублей в&nbsp;месяц!</p>
-				<div>
-					{{ Macros.Btn('mailto:info@it-sm.org', 'btn--mt') }}
-				</div>
-			</div>
 		</div>
 	</div>
 </section>
@@ -88,30 +73,30 @@
 				<div class="calc__row calc__row--border">
 
 						<div class="calcr__item calc-item">
-							<input class="calc-item__input" type="number" name="workers" data-calc="workers" required="" placeholder="50">
+							<input class="calc-item__input" type="number" name="workers" data-calc="workers" required="" title="Заполните это поле" title="Заполните это поле" placeholder="50">
 							<div class="calc-item__descr">Количество сотрудников в&nbsp;компании</div>
 						</div>
 
 						<div class="calc__item calc-item calc-item--roubles">
-							<input class="calc-item__input" type="number" name="average-salary" data-calc="average-salary" required="" placeholder="25000">
+							<input class="calc-item__input" type="number" name="average-salary" data-calc="average-salary" required="" title="Заполните это поле" placeholder="25000">
 							<span class="calc-item__symbol">₽</span>
 							<div class="calc-item__descr">Размер средней зарплаты в&nbsp;компании до&nbsp;вычета НДФЛ, ₽</div>
 						</div>
 
 						<div class="calc__item calc-item  calc-item--hidden calc-item--percentage">
-							<input class="calc-item__input calc-item__input--disabled" type="number" name="ratio" data-calc="ratio" required="" placeholder="35" disabled="">
+							<input class="calc-item__input calc-item__input--disabled" type="number" name="ratio" data-calc="ratio" required="" title="Заполните это поле" placeholder="35" disabled="">
 							<span class="calc-item__symbol">%</span>
 							<div class="calc-item__descr">Соотношение зарплаты к&nbsp;валовой прибыли компании, %</div>
 						</div>
 
 						<div class="calc__item calc-item calc-item--percentage">
-							<input class="calc-item__input" type="number" name="margin" data-calc="margin" required="" placeholder="20">
+							<input class="calc-item__input" type="number" name="margin" data-calc="margin" required="" title="Заполните это поле" placeholder="20">
 							<span class="calc-item__symbol">%</span>
-							<div class="calc-item__descr">Усредненная маржа компании, %</div>
+							<div class="calc-item__descr" title=""><span class="calc-item__note">Усредненная маржа</span> компании, %<p class="calc-item__note-descr">Маржа&nbsp;&mdash; усредненное отношение объема проданной продукции в&nbsp;деньгах к&nbsp;себестоимости ее&nbsp;покупки (производства)</p></div>
 						</div>
 
 						<div class="calc__item calc-item">
-							<input class="calc-item__input" type="number" name="workdays" data-calc="workdays" required="" placeholder="22">
+							<input class="calc-item__input" type="number" name="workdays" data-calc="workdays" required="" title="Заполните это поле" placeholder="22">
 							<div class="calc-item__descr">Количество рабочих дней в&nbsp;месяце</div>
 						</div>
 				</div>
@@ -174,6 +159,21 @@
 	</div>
 </section>
 
+<section class="section section--onecolumn section--no-min-height">
+	<div class="container">
+		<div class="section__inner section__inner--height-auto section__inner--no-padding">
+			<div class="section__content" data-aos="fade-up" data-aos-offset="200">
+				<h2 class="title" data-aos="fade-up" data-aos-offset="200" data-aos-delay="150">Если резерв&nbsp;– то&nbsp;в&nbsp;облаке</h2>
+				<p class="text text--mw-850">Создание резервного сервера в&nbsp;наземной инфраструктуре обойдется вашей компании не&nbsp;дешевле покупки основного, первичного. На&nbsp;&laquo;железо&raquo; и&nbsp;программное обеспечение придется потратить от&nbsp;500&nbsp;000&nbsp;рублей.</p>
+				<p class="text text--mw-850 text--mb">В&nbsp;то&nbsp;время как резервный ЦОД в&nbsp;облаке не&nbsp;требует капитальных затрат. А&nbsp;операционные затраты составят всего от&nbsp;4&nbsp;750 рублей в&nbsp;месяц!</p>
+				<div>
+					{{ Macros.Btn('mailto:info@it-sm.org', 'btn--mt') }}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
 <section class="section section--bg-gray" id="advantages">
 	<div class="container">
 		<div class="section__inner" data-aos="fade-right" data-aos-offset="200" >
@@ -212,7 +212,9 @@
 		<div class="section__inner">
 			<div class="section__content">
 				<h1 class="title title--size-extra" data-aos="fade-up">Мы&nbsp;ответим на&nbsp;все<br> ваши вопросы</h1>
-				<p class="text text__contact" data-aos="fade-up"><a href="tel:+78633330215">+7 (863) 333-02-15</a></p>
+				<p class="text text__contact" data-aos="fade-up"><a href="tel:+78633091002">+7 (863) 309-1002</a></p>
+				<p class="text text__contact" data-aos="fade-up"><a href="tel:+74951314654">+7 (495) 131-4654</a></p>
+
         <p class="text text__contact" data-aos="fade-up"><a data-aos-delay="100" href="mailto:info@it-sm.org">info@it-sm.org</a></p>
         <p class="text text__contact" data-aos="fade-up">Ростов-на-Дону</p>
         <p class="text text__contact" data-aos="fade-up"><a target="_blank" href="https://yandex.ru/maps/39/rostov-na-donu/?mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fll%3D39.729%252C47.223%26spn%3D0.001%252C0.001%26text%3D%25D0%25A0%25D0%25BE%25D1%2581%25D1%2581%25D0%25B8%25D1%258F%252C%2520%25D0%25A0%25D0%25BE%25D1%2581%25D1%2582%25D0%25BE%25D0%25B2-%25D0%25BD%25D0%25B0-%25D0%2594%25D0%25BE%25D0%25BD%25D1%2583%252C%2520%25D0%25A3%25D0%25BD%25D0%25B8%25D0%25B2%25D0%25B5%25D1%2580%25D1%2581%25D0%25B8%25D1%2582%25D0%25B5%25D1%2582%25D1%2581%25D0%25BA%25D0%25B8%25D0%25B9%2520%25D0%25BF%25D0%25B5%25D1%2580%25D0%25B5%25D1%2583%25D0%25BB%25D0%25BE%25D0%25BA%252C%252032%2520&ll=39.729125%2C47.222770&z=17" class="text__contact text__contact--underline">Пер. Университетский, 32</a></p>
